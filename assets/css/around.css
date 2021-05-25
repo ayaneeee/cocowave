@@ -1,0 +1,37 @@
+
+/* around  */
+.around-word > p{
+	text-align: center;
+	padding: 2%;
+}
+.around-detail{
+	height: 1000px;
+	background-color: #fff;
+}
+
+/* 	footer */
+.copylight{
+	text-align: center;
+	padding: 5% 14% 0 14%;
+}
+/* レスポンシブルデザイン */
+/* スマートフォン */
+
+@media screen and (max-width :767px){
+	/* header */
+.header-all{
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	height: 40px;
+}
+.top-menu{
+	display: none;
+}
+.header-right{
+	display: none;
+}
+
+
+}
+
