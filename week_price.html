@@ -7,9 +7,14 @@
 	<title> cocowave</title>
 
 	<!-- css　ファイル -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="./assets/css/reset.css">
-	<link rel="stylesheet" href="./assets/css/around.css">
+	<link rel="stylesheet" href="./assets/css/drawer.css">
 	<link rel="stylesheet" href="./assets/css/common.css">
+	<link rel="stylesheet" href="./assets/css/price_around.css">
 
 
 	<!-- googleフォント -->
@@ -21,61 +26,85 @@
 </head>
 	
 <body>
-	<header>
-		<div class="header-all">
-			<div class="header-left">
-				<a href="./index.html#top_back">
-					<img src="./assets/img/IMG_3238.PNG" alt="">
-				</a>
-			</div>
-			<div class="top-menu">
-				<ul class="main-nav">
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#">Home</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#about">About</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#introduce-inside">Room</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#price">Price</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#access">Access</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#contact">Contact</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./around.html">Around</a></li>
-					<li><img src="./assets/img/surf_3.png" alt=""><a href="./reservation.html">Reservation</a></li>
-
-				</ul>
-			</div>
-			<div class="header-right">
-				<ul class="contactform">
-					<li><a href="https://www.instagram.com/cocowave_okinawa/"><i class="fab fa-instagram iconsize"></i></a></li>
-				</ul>
-			</div>
-		</div>
+	<header class="drawer drawer--right">
+			<div class="header-all" id="top_back">
+				<div class="header-left">
+					<a href="./index.php#top_back">
+						<img src="./assets/img/IMG_3238.PNG" alt="">
+					</a>
+				</div>
+				<div class="top-menu">
+					<ul class="main-nav">
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#">Home</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#about">About</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#introduce-inside">Room</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#price">Price</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#access">Access</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./index.html#contact">Contact</a></li>
+						<li><img src="./assets/img/surf_3.png" alt=""><a href="./around.html">Around</a></li>
+						</ul>
+				</div>
+				<div class="header-right">
+					<ul class="contactform">
+						<li><a href="https://www.instagram.com/cocowave_okinawa/"><i class="fab fa-instagram iconsize"></i></a></li>
+					</ul>
+				</div>
+					<!-- ドロワー -->			
+					<button type="button" class="drawer-toggle drawer-hamburger">
+					<span class="sr-only">toggle navigation</span>
+					<span class="drawer-hamburger-icon"></span>
+				</button>
+				<!-- ハンバーガー -->
+				<nav class="drawer-nav">
+					<ul class="drawer-menu">
+					  <li><a href="./index.php#about">About</a></li>
+						<li><a href="./index.php#introduce-inside">Room</a></li>
+						<li><a href="./index.php#price">Price</a></li>
+						<li><a href="./index.php#access">Access</a></li>
+						<li><a href="./index.php#contact">Contact</a></li>
+						<li><a href="./around.php">Around</a></li>
+						<li><a href="https://www.instagram.com/cocowave_okinawa/"><i class="fab fa-instagram iconsize"></i></a></li>
+					</ul>
+				</nav>
 	</header>
 	<!-- header ここまで -->
 	<main>
 		<!-- week-->
 		<section>
 			<h1 class="title-size">Weekly</h1>
-				<div class="around-word"> 
-					<p>
-					</p>
-					<div class="around-detail">
-
+			<div class="around-word"> 
+				<div class="around-detail">
+						<h1>Price</h1>
+						<p class="price-detail">¥100,000〜/1Week</p>
+						<div class="img_box">
+							<img class="img_1" src="./assets/img/spanky_1.PNG" alt="犬">
+							<div class="comment_img">
+								<img src="./assets/img/comment2.jpg" alt="">
+							</div>
+						</div>
+						<a href="./index.html#contact" class="btn-flat-stripe">ご予約はこちら</a>
 					</div>
-				</div>
+		</div>		
     </section>
 		<section id="price">
 			<ul class="price-nav"> 
-				<li class="price-content btn-1"> <a href="./day_price.html"> <i class="fas fa-arrow-left"></i>Day</a></li>
-				<li class="price-content btn-3"><a href="./mounth.html">Monthly<i class="fas fa-arrow-right"></i></a></li>
+				<li class="price-content_2 btn-1"> <a href="./day_price.html"> <i class="fas fa-arrow-left"></i>Day</a></li>
+				<li class="price-content_2 btn-3"><a href="./mounth.html">Monthly<i class="fas fa-arrow-right"></i></a></li>
 			</ul>
 	  </section>
 	</main>
 		<!-- footer -->
-		<footer>
+	<footer>
 			<!-- コピーライト -->
 			<p class="copylight">
 				Copyright &copy; Cocowave.ALL RIGHTS RESERVED.
 			</p>
-		</footer>
+	</footer>
 		<!-- footer ここまで -->	
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="./assets/js/drawer.js"></script>
+	<script defer src="./assets/js/iscroll.js"></script>
+	<script defer src="./assets/js/main.js"></script>
 </body>
 
 </html>

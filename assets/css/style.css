@@ -1,126 +1,96 @@
-*{
-	/* font-family: 'Courgette', cursive; */
-	font-family: 'Permanent Marker', cursive;
-}
 
-body{
-	background-color: #00afcc;
-	color: #fff;
-}
+/* Loading */
 
-section{
-	padding: 5% 14% 0 14%;
-}
-
-section >h1{
-	text-align: center;
-	text-shadow:2px 2px 0px #333;
-}
-
-.title-size{
-	font-size:40px ;
-}
-/* header */
-.header-all{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2% 4%;
-}
-/* header-left */
-.header-left >a>img{
-	height: 60px;
-}
-.main-nav  {
-	display: flex;
-}
-
-.main-nav > li {
-	padding-right:6%;
-	font-size: 20px;
-	font-family: 'Courgette', cursive;
-	text-align: center;
-}		
-
-
-.main-nav > li >a{
-	text-decoration: none;
-	color: #fff;
-}	
-.main-nav >li{
-	display: flex;
-	align-items: center;
-}
-.main-nav >li>img{
-	display: none;
-	height: 30px;
-} 
-.main-nav >li:hover>img{
-	display: block;
-	transition: .3s;
-}
-
-
-/* header-right */
-.contactform{
-	display: flex;
-}
-.contactform >li{
-	padding-left: 5px;
-}
-.fab{
-	color: #fff;
-	font-size: 130%;
-}
-
-/* メインスライダー */
-.bgimg-slider {
-  width: 100vw;
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-	width: 80%;
-	height: 100vh;
-
-}
+/* Loading背景画面設定　*/
+#splash {
+	/*fixedで全面に固定*/
+		position: fixed;
+		height: 100%;
+		z-index: 999;
+		background:#333;
+		text-align:center;
+		color:#fff;
+		background-color: #00afcc;
+		left: 0;
+		right: 0;
+	}
+	
+	/* Loading画像中央配置　*/
+	#splash_logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+	}
+	
+	/* Loading アイコンの大きさ設定　*/
+	#splash_logo img {
+		width: 35%;
+	}
+	
+	/* fadeUpをするアイコンの動き */
+	.fadeUp{
+	animation-name: fadeUpAnime;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+	}
+	
+	@keyframes fadeUpAnime{
+		from {
+			opacity: 0;
+		transform: translateY(100px);
+		}
+	
+		to {
+			opacity: 1;
+		transform: translateY(0);
+		}
+	}
+/* header/header-left/header-right common.cssに記載*/
 
 
 
 /* main画面 */
+
 .main-view{
 	display: flex;
-	position: relative;
-
+	padding-right: 9%;
 }
+
+/* メインスライダー */
+.bgimg-slider {
+  background-position: center center;
+  background-size: cover;
+	width: 80%;
+	height: 90vh;
+	position: relative;
+}
+
 .main-titel{
 	position: absolute;
-	top: 50%;
-	left: 75%;
-	font-size: 35px;
+	top: 33%;
+	left: 96%;
+	font-size: 45px;
 }
 .main-titel p{
 	font-size: 30px;
 }
-.detail-1 >p,.detail-2 >p{
-	font-size: 55px;
-	text-shadow:3px 3px 0px #000;
-	font-weight: 600; 
+.detail-1 >p, .detail-2 >p {
+	font-size: 70px;
+	text-shadow: 3px 2px 0 #333333;;
+	font-weight: 600;
 }
 .detail-2 >p{
 	padding-left: 25%;
 }
 
 .detail-3 p{
-	font-size: 20px;
+	font-size: 23px;
 	text-align: center;
-	/* text-shadow:2px 2px 0px #4169e1; */
 }
-.main-view>img{
 
-}
 
 /* about */
 #about{
@@ -130,40 +100,31 @@ section >h1{
 	position: relative;
 }
 
-
 .about-contents >p{
 	margin: 20px;
 }
 .icon_1{
-	height: 110px;
-	width:100px ;
+	width: 8%;
 	position: absolute;
-	top: 30%;
-	left: 6%;
-	/* -webkit-transform: rotate(-13deg); */
-  /* -moz-transform: rotate(-13deg); */
+	top: 29%;
+	left: 8%;
 }
 .icon_2{
-	height: 110px;
-	width:100px ;
+	width: 8%;
 	position: absolute;
-	top: 80%;
+	top: 56%;
 	left: 85%;
 }
 
 
-/* 部屋紹介 */
-.inside{
-	padding-right:5%;
-	padding-left:5% ;
-	padding-bottom: 5%;
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: black;
+.video-content >iframe{
+	width: 70%;
+	height: 25vw;
+	text-align: center;
+	margin: auto;
 }
+
+/* 部屋紹介 */
 .inside-main-pic{
 	display: block;
 	height: 50%;
@@ -171,53 +132,45 @@ section >h1{
 	margin-top: 20px;
 }
 
-.inside-description{
-	margin: 20px;
+.inside{
+	padding-right:5%;
+	padding-left:5% ;
+	padding-bottom: 5%;
+	background-color: #fff;
+	color: #333333;;
 }
 
-.floor_plan{
+.inside-description{
+	padding: 30px;
+}
+
+.floor_plan {
+	display: block;
 	height: 400px;
 	width: 80%;
-	margin: 20px;
+	margin: 0 auto;
 }
 
 .room_gallery{
-	display: flex;
-	flex-wrap: wrap-reverse;
-	justify-content: center;
+	margin	: 80px;
+}
+.room_gallery img{
+ height: 120px;
+ width: 150px;
+ margin: auto;
+
 }
 
-.room_gallery > img{
- height: 180px;
- width: 250px;
- padding: 5px;
+.slick-prev:before,
+.slick-next:before{
+color: #333333;
 }
-
+.slick-slider {
+	text-align: center;
+	margin:9% 0;
+	width: 100%;
+}
 /* price common cssに記入済
-.price-nav{
-	display: flex;
-	justify-content: space-around;
-	padding: 5% 2%;	
-}
-
-.price-content >a{
-	display: inline-block;
-  height: 80px;
-	width: 120px;
-  line-height: 80px;
-  text-align: center;
-  padding: 0 20px; 
-	background-color: #f2cf01;
-		border-radius: 10px;
-	text-decoration: none;
-	color: #000;
- }
- .price-content >a:hover{
-	color: #fff;
-	background-color:#000;
-} */
-
-
 
 /* アクセス */
 .access-detail{
@@ -226,12 +179,10 @@ section >h1{
 	justify-content: center;
 	align-items: center;
 }	
-
 .adress{
 	flex-direction: column;
 	margin: 30px;
 }
-
 .map{
 	width:800px;
 	height:500px;
@@ -243,78 +194,123 @@ section >h1{
 	margin: 2%;
 }
 .adress{
-	margin: 2%;
+	margin: 0 auto;
 	padding: 2%;
 	width: 100%;
 }
 .adress-description{
-	border-radius: 30px;
-	background-color: #fff;
-	width: 100%;
-	height: 300px;
-	margin: 10%;
-}
-
-/* contact */
-#contact{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	/* border-radius: 30px; */
+	background-color:rgba(255, 255,255,1);
+	width: 100%;
+	height: 30%;
+	margin: 10%;
+	color: #333333;;
+	border-left: double 10px #f2cf01;/*左線*/
+	border-right: double 10px #f2cf01;/*右線*/
+}
+
+.adress-description p{
+	margin: 7%;
+}
+
+.wavelogo{
+	width: 30%;
+	margin: 0 auto;
+}
+/* around  */
+.around-word > p{
+	text-align: center;
+	padding: 2%;
+}
+.around-detail{
+	background-color: #fff;
+	font-family: "游ゴシック体", "YuGothic", "YuGothic M", sans-serif;
+	color:#333333;
+}
+.around-detail > li{
+	padding: 3% 1%;
+}
+
+.around-tittle{
+	display: inline;
+	margin: 0 auto;
+	font-size: 1.3em;
+	border-bottom:dotted;/*下線を点線にする*/
+	border-color:#333333;
+	/* font-family: 'Courgette','cursive'; */
+}
+.detail{
+	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	padding: 5% 14% 0 14%;
-}
-.form_contents{
-	padding: 1%;
+	padding: 5%;
 }
 
-.contact_contents{
-	width: 450px;
-	height: 40px;
+.detail > img {
+	width: 35%;
+	border-radius: 50%;
+	overflow:hidden; 
+	transition:1s all;
 }
-#contact_space{
-	height: 300px;
-}
-
-#contact button p{
-	font-size: 20px;
-}
-
-button.btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  border-radius: 0.5rem;
+.detail > img:hover{
+	transform:scale(1.3,1.3);
+	transition:1s all;
 }
 
-button.btn-malformation {
-  font-size: 2rem;
-  padding: 2rem 3rem;
-  color: #fff;
-  border-radius: 100% 80px / 80px 100%;
+.detail > p {
+	font-size: 1em;
+	padding-left: 2%;
+	width: 50%;
+}
+
+
+/* contact */
+#contact>p{
+	text-align: center;
+}
+
+	#form{
+	width: 100%;
+}
+
+.field {
+  margin: 3%;
+	color: #fff;
+}
+
+
+.field input {
+	display: block;
+	line-height: 3;
+	margin: auto;
+	width: 50%;
+	font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+}
+.field input[name="message"]{
+	line-height: 16;
+}
+input[type="submit"] {
+	font-size: 2rem;
+	padding: 3.5% 1.5%;
+	color: #fff;
+	border-radius: 100% 80px / 80px 100%;
 	background-color: #f2cf01;
-	border: none;  
+	border: none;
 	outline: none;
+	margin: auto;
+	width: 22%;
+	display: block;
 }
 
-button.btn-malformation:hover {
+input[type="submit"]:hover {
   color: #fff;
   border-radius: 60% 80% / 100% 80%;
 }
  
+
 /* 	footer */
 .copylight{
 	text-align: center;
@@ -325,54 +321,53 @@ button.btn-malformation:hover {
 /* スマートフォン */
 
 @media screen and (max-width :767px){
-	/* header */
-.header-all{
-	background-color: #fff;
-	margin: 0;
-	padding: 0;
-	height: 40px;
-}
-.top-menu{
-	display: none;
-}
-.header-right{
-	display: none;
-}
+	/* Loading */
+	#splash_logo img {
+		width: 65%;
+	}
 /* main画面*/
-.main-view {
-    margin-top: 0;
-		position: static;
-		background-image:url(../img/livingroom.jpeg);
-		background-size:cover;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 250px;
-
+.main-view{
+	padding: 1% 0;
 }
-.main-view img{
-	display: none;
+.bgimg-slider{
+	width: 100%;
+	position: relative;
+	height: 40vh;
 }
-.main-titel{
-	position: static;
-	font-size: 25px;
-	
+.main-titel {
+	position: absolute;
+	top: 32%;
+	left: 15%;
+	width: 70%;
+	height: 36%;
 }
 
+.detail-1 >p, .detail-2 >p {
+	font-size: 40px;
+	text-shadow: 3px 2px 0  #333333;;
+	font-weight: 600;
+	padding-left:0;
+	text-align:center;
+}
+.detail-3 >p{
+	font-size: 20px;
+}
 /* about */
-.icon_1,.icon_2{
-	width: 60px;
-	height: 50px;
-}
-.icon_1{
-	top: 6%;
-}
-.icon_2{
-	left: 80%;
+.video-content >iframe{
+	width: 90%;
+	height: 30vw;
 }
 
 .floor_plan{
 	height: 160px;
+}
+
+.slick-prev:before,
+.slick-next:before{
+display: none;
+}
+.room-description{
+	margin: 5%;
 }
 /* アクセス  */
 .access-detail{
@@ -382,15 +377,16 @@ button.btn-malformation:hover {
 	width:100%;
 	height:250px;
 }
+.adress {
+	text-align: center;
+}
+.adress-description {
+	margin: 0%;
+}
+
 /* contact */
-.contact_contents {
-	width: 100%;
-	height: 20px;
-}
-.btn-malformation{
-
+.field input {
+	width: 85%;
 }
 
-
 }
-

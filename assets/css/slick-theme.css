@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: #000;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -201,4 +201,11 @@
 {
     opacity: .75;
     color: black;
+}
+@media screen and (max-width :284px){
+	/* スライダー */
+	.slick-dots{
+		display: none;
+	}
+
 }

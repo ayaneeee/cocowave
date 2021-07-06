@@ -1,14 +1,23 @@
 *{
-	font-family: 'Courgette', cursive;
+	font-family: 'Courgette','cursive';
+}
+html {
+	/* ルートのフォントサイズを10pxに設定しておく */
+font-size: 62.5%;
 }
 
 body{
 	background-color: #00afcc;
 	color: #fff;
+	max-width: 1152px;
+	margin: 0 auto;
+	font-size: 1.6em;
 }
 
+
+
 section{
-	padding: 5% 14% 0 14%;
+	padding: 15% 14% 0 14%;
 }
 
 section >h1{
@@ -19,6 +28,12 @@ section >h1{
 .title-size{
 	font-size:40px ;
 }
+p , span{
+  font-family: "游ゴシック体", YuGothic, "YuGothic M", sans-serif;
+}
+.main-titel p{
+	font-family: 'Courgette','cursive';
+}
 /* header */
 .header-all{
 	display: flex;
@@ -27,11 +42,17 @@ section >h1{
 	padding: 2% 4%;
 }
 /* header-left */
-.header-left >a>img{
-	height: 60px;
+.header-left{
+	width: 18%;
 }
+.header-left >a>img{
+	width: 100%;
+}
+
+/*  header-center*/
 .main-nav  {
 	display: flex;
+	justify-content: center;
 }
 
 .main-nav > li {
@@ -60,6 +81,7 @@ section >h1{
 }
 
 
+
 /* header-right */
 .contactform{
 	display: flex;
@@ -71,9 +93,10 @@ section >h1{
 	color: #fff;
 	font-size: 130%;
 }
+/* ハンバーガー */
 
 
-/* price buttun*/
+/* price */
 .price-nav{
 	display: flex;
 	justify-content: space-around;
@@ -102,72 +125,48 @@ section >h1{
 /* スマートフォン */
 
 @media screen and (max-width :767px){
-	/* header */
-.header-all{
-	background-color: #fff;
-	margin: 0;
-	padding: 0;
-	height: 40px;
+	html {
+		/* ルートのフォントサイズを10pxに設定しておく */
+	font-size: 40%;
+	}
+	.title-size {
+    font-size: 33px;
 }
-.top-menu{
-	display: none;
-}
-.header-right{
-	display: none;
-}
-/* main画面*/
-.main-view {
-    margin-top: 0;
-		position: static;
-		background-image:url(../img/livingroom.jpeg);
-		background-size:cover;
-		display: flex;
-		justify-content: center;
+		/* header */
+	.top-menu{
+		display: none;
+	}
+	.header-right{
+		display: none;
+	}
+
+/* ハンバーガー */
+
+	.hamburger{
+		display: initial;
+	}
+	.hamburger__icon, .hamburger__icon:after, .hamburger__icon:before {
+		color: #fff;
+	}
+	/* price */
+	.price-nav{
+		flex-direction: column;
 		align-items: center;
-		height: 250px;
-
+		justify-content: center;
+	}
+	.price-content{
+		margin: 3%;
+	}
+	.price-content >a {
+		height: 94px;
+		width: 182px;
+		line-height: 94px;
+	}
 }
-.main-view img{
-	display: none;
+@media screen and (max-width :284px){
+	.price-content >a {
+		height: 49px;
+		width: 70px;
+		line-height: 49px;
+	}
 }
-.main-titel{
-	position: static;
-	font-size: 25px;
-	
-}
-
-/* about */
-.icon_1,.icon_2{
-	width: 60px;
-	height: 50px;
-}
-.icon_1{
-	top: 6%;
-}
-.icon_2{
-	left: 80%;
-}
-
-.floor_plan{
-	height: 160px;
-}
-/* アクセス  */
-.access-detail{
-	flex-direction: column;
-}	
-.map{
-	width:100%;
-	height:250px;
-}
-/* contact */
-.contact_contents {
-	width: 100%;
-	height: 20px;
-}
-.btn-malformation{
-
-}
-
-
-}
-
